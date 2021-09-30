@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:shopingcart_flutter_firestore/widgets/cart_product.dart';
+import 'package:shopingcart_flutter_firestore/widgets/cart_total.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -11,11 +13,16 @@ class CartScreen extends StatelessWidget {
       ),
       body: SafeArea(
           child: Container(
-        child: Column(
-          children: [],
+        child: Expanded(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              CartProduct(),
+              CartTotal(),
+            ],
+          ),
         ),
       )),
     );
-    ;
   }
 }
